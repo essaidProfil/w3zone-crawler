@@ -1,0 +1,5 @@
+{
+    "require": {
+        "w3zone/crawler": "^1.0"
+    }
+}
