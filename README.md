@@ -123,15 +123,14 @@ use w3zone\Crawler\{Crawler, Services\phpCurl};
 
 $crawler = new Crawler(new phpCurl);
 
-$url = 'https://github.com/login';
+$url = 'https://domaine.com/login';
 $response = $crawler->get($url)->dumpHeaders()->run();
 
-preg_match('#<input name="authenticity_token".*?value="(.*?)"#', $response['body'], $authenticity_token);
+preg_match('#<input name="token".*?value="(.*?)"#', $response['body'], $token);
 
-$url = 'https://github.com/session';
-$post['commit'] = 'Sign in';
-$post['utf8'] = '✓';
-$post['authenticity_token'] = $authenticity_token[1];
+$url = 'https://domain.com/session';
+$post['submit'] = 'Sign in';
+$post['token'] = $token[1];
 $post['login'] = 'valid email';
 $post['password'] = '';
 
