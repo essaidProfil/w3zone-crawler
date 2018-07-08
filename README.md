@@ -1,4 +1,4 @@
-# w3zone-crawler-
+# w3zone-crawler
 
 Good example to proceed  data scraping tests !
 This is only for training and demonstration purposes.
