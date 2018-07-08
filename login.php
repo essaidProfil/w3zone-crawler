@@ -25,6 +25,8 @@ $response = $crawler
     ->dumpHeaders()
 ->run();
 
+
+// Just for testing purposes
 var_dump($response);
 
 
